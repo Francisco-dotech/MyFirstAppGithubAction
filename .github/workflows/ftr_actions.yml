@@ -22,8 +22,8 @@ jobs:
      runs-on: 
      - ubuntu-latest
      
-     - steps:
+     steps:
      - name: "Ejecucion-Actions"
-           run: |
-             Name= "Paco"
-             echo "Hola $Name"
+       run: |
+         Name= "Paco"
+         echo "Hola $Name"

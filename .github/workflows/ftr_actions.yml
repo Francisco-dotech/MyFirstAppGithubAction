@@ -22,7 +22,27 @@ jobs:
      runs-on: ubuntu-latest
      
      steps:
+     - name: Checkout repository
+       uses: actions/checkout@v4
+     
+     - name: Setup .NET
+       uses: actions/setup-dotnet@v4
+       with:
+        dotnet-version: '8.0'
+
+     - name: Restore depencias
+       run: dotnet restore
+
+     - name: Build project
+       run: dotnet build --configuration Release
+
+     - name: Run test
+       run: dotnet test
+       
      - name: "Ejecucion-Actions"
        run: |
          Name="Paco"
          echo "Hola $Name"
+       
+
+     

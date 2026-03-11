@@ -19,8 +19,7 @@ env:
 jobs:
   Build:
      name: Build
-     runs-on: 
-     - ubuntu-latest
+     runs-on: ubuntu-latest
      
      steps:
      - name: "Ejecucion-Actions"

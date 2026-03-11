@@ -1,1 +1,29 @@
+name: feature
 
+permissions:
+  id-token: write
+
+concurrency: dev
+
+on:
+  push:
+    branches:
+      - ftr_actions
+  workflow_dispatch: 
+
+env:
+  Nombre_usuario: "Francisco"
+  valor:  "1"
+  healtcheck: /api/v1.0/healt
+
+jobs:
+  Build:
+     name: Build
+     runs-on: 
+     - ubuntu-latest
+     
+     - steps:
+     - name: "Ejecucion-Actions"
+           run: |
+             Name= "Paco"
+             echo "Hola $Name"
